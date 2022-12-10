@@ -1,23 +1,67 @@
+body{
+    background-color:black;
+}
 .head{
+    background-image: url(./img/background.jpg);
+    background-size: 100% 40%;
+    height: 900px;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.top{
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 50px;
-    background-color: black;
-    fill: black;
 }
-.head a{
+.top a{
     text-decoration: none;
     color: red;
-    margin-right: 20px;
+    margin-right: 70px;
     font-size: 20px;
 }
-.head .name{
+.top .name{
     font-size: 30px;
     padding-right: 200px;
     margin-left: 10px;
     color: red;
 }
+.head .login{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    margin-right: 70px;
+    font-size: 17px;
+    font-weight: bold;
+}
 .head .nav2{
     margin-left: -200px;
+}
+.head .bot h1{
+    margin-top: 90px;
+    margin-left: 90px;
+    color: white;
+    font-size: 40px;
+}
+.head .bot .sec{
+    margin-top: -30px;
+    margin-left: 150px;
+}
+.bot h3{
+    color: white;
+    margin-left: 200px;
+}
+.bot .login{
+    margin-left: 400px;
+}
+.head .login:hover{
+    background-color:green;
+}
+.hr{
+    background-color: white;
+    height: 3px;
+}
+.cont{
+    margin-top: -500px;
 }
