@@ -1,13 +1,9 @@
 body{
-    background-color:black;
-}
-.head{
-    background-image: url(./img/background.jpg);
-    background-size: 100% 40%;
-    height: 900px;
+    background: url(./img/background.jpg);
     background-repeat: no-repeat;
-    position: relative;
-
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 .top{
 
@@ -17,7 +13,7 @@ body{
 }
 .top a{
     text-decoration: none;
-    color: red;
+    color: green;
     margin-right: 70px;
     font-size: 20px;
 }
@@ -25,12 +21,12 @@ body{
     font-size: 30px;
     padding-right: 200px;
     margin-left: 10px;
-    color: red;
+    color: green;
 }
 .head .login{
     text-decoration: none;
-    background-color: red;
-    color: white;
+    background-color: aliceblue;
+    color: green;
     margin-right: 70px;
     font-size: 17px;
     font-weight: bold;
@@ -39,29 +35,24 @@ body{
     margin-left: -200px;
 }
 .head .bot h1{
-    margin-top: 90px;
     margin-left: 90px;
-    color: white;
+    color: green;
     font-size: 40px;
 }
 .head .bot .sec{
-    margin-top: -30px;
     margin-left: 150px;
 }
 .bot h3{
-    color: white;
+    color: green;
     margin-left: 200px;
 }
 .bot .login{
     margin-left: 400px;
 }
 .head .login:hover{
-    background-color:green;
+    opacity: 0.5;
 }
 .hr{
-    background-color: white;
+    background-color: red;
     height: 3px;
-}
-.cont{
-    margin-top: -500px;
 }
