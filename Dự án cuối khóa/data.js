@@ -57,8 +57,8 @@ function addDiv1(i){
     var add = document.createElement("div")
     Fimg = data[i].img
     Fname = data[i].name
-    if(i!=9 && i!=2) var inside = '<div class = "films"><img src='+Fimg+' alt="" width="180px" height="150px"><h3>'+Fname+'</h3>'
-    else var inside = '<div class = "films" id = "spe"><img src='+Fimg+' alt="" width="180px" height="150px" ><h3>'+Fname+'</h3>'
+    if(i!=9 && i!=2) var inside = '<div class = "films"><img src='+Fimg+' alt="" width="180px" height="150px"><h3 class = "f">'+Fname+'</h3>'
+    else var inside = '<div class = "films" id = "spe"><img src='+Fimg+' alt="" width="180px" height="150px" ><h3 class = "f">'+Fname+'</h3>'
     add.innerHTML = inside
     var mov1 = document.querySelector(".movie1")
     mov1.append(add)
@@ -122,7 +122,7 @@ function addDiv2(i){
     var add = document.createElement("div")
     let Fimg = data2[i].img
     let Fname = data2[i].name
-    var inside = '<div class = "films"><img src='+Fimg+' alt="" width="180px" height="150px" ><h3>'+Fname+'</h3>'
+    var inside = '<div class = "films"><img src='+Fimg+' alt="" width="180px" height="150px" ><h3 class = "f">'+Fname+'</h3>'
     add.innerHTML = inside
     var mov2 = document.querySelector(".movie2")
     mov2.append(add)
@@ -186,7 +186,7 @@ function addDiv3(i){
     var add = document.createElement("div")
     let Fimg = data3[i].img
     let Fname = data3[i].name
-    var inside = '<div class = "films"><img src='+Fimg+' alt="" width="180px" height="150px" ><h3>'+Fname+'</h3>'
+    var inside = '<div class = "films"><img src='+Fimg+' alt="" width="180px" height="150px" ><h3 class = "f">'+Fname+'</h3>'
     add.innerHTML = inside
     var mov2 = document.querySelector(".movie3")
     mov2.append(add)
@@ -199,12 +199,12 @@ arrow2.addEventListener("click",()=>{
     if(cnt1 > 0) arrow1.style.visibility = "initial"
     if(cnt1 == 5){
         let p = movie1.computedStyleMap().get("transform")[0].x.value
-        movie1.style.transform = `translateX(${p-240}px)`
+        movie1.style.transform = `translateX(${p-243}px)`
         arrow2.style.visibility = "hidden"
     }
     if(cnt1 < 5){
         let p = movie1.computedStyleMap().get("transform")[0].x.value
-        movie1.style.transform = `translateX(${p-240}px)`
+        movie1.style.transform = `translateX(${p-243}px)`
     }
 })
 let arrow1 = document.querySelector(".arrow1")
@@ -216,7 +216,7 @@ arrow1.addEventListener("click",()=>{
         cnt1--;
         arrow1.style.visibility = "visible"
         let p = movie1.computedStyleMap().get("transform")[0].x.value
-        movie1.style.transform = `translateX(${p+240}px)`
+        movie1.style.transform = `translateX(${p+243}px)`
     }
     if(cnt1 == 0) arrow1.style.visibility = "hidden"
 })
@@ -228,12 +228,12 @@ arrow4.addEventListener("click",()=>{
     if(cnt2 > 0) arrow3.style.visibility = "initial"
     if(cnt2 == 5){
         let p = movie2.computedStyleMap().get("transform")[0].x.value
-        movie2.style.transform = `translateX(${p-240}px)`
+        movie2.style.transform = `translateX(${p-243}px)`
         arrow4.style.visibility = "hidden"
     }
     if(cnt2 < 5){
         let p = movie2.computedStyleMap().get("transform")[0].x.value
-        movie2.style.transform = `translateX(${p-240}px)`
+        movie2.style.transform = `translateX(${p-243}px)`
     }
 })
 let arrow3 = document.querySelector(".arrow3")
@@ -244,7 +244,7 @@ arrow3.addEventListener("click",()=>{
         cnt2--;
         arrow3.style.visibility = "visible"
         let p = movie2.computedStyleMap().get("transform")[0].x.value
-        movie2.style.transform = `translateX(${p+240}px)`
+        movie2.style.transform = `translateX(${p+243}px)`
     }
     if(cnt2 == 0) arrow3.style.visibility = "hidden"
 })
@@ -256,12 +256,12 @@ arrow6.addEventListener("click",()=>{
     if(cnt3 > 0) arrow5.style.visibility = "initial"
     if(cnt3 == 5){
         let p = movie3.computedStyleMap().get("transform")[0].x.value
-        movie3.style.transform = `translateX(${p-240}px)`
+        movie3.style.transform = `translateX(${p-243}px)`
         arrow6.style.visibility = "hidden"
     }
     if(cnt3 < 5){
         let p = movie3.computedStyleMap().get("transform")[0].x.value
-        movie3.style.transform = `translateX(${p-240}px)`
+        movie3.style.transform = `translateX(${p-243}px)`
     }
 })
 let arrow5 = document.querySelector(".arrow5")
@@ -272,7 +272,20 @@ arrow5.addEventListener("click",()=>{
         cnt3--;
         arrow5.style.visibility = "visible"
         let p = movie3.computedStyleMap().get("transform")[0].x.value
-        movie3.style.transform = `translateX(${p+240}px)`
+        movie3.style.transform = `translateX(${p+243}px)`
     }
     if(cnt3 == 0) arrow5.style.visibility = "hidden"
 })
+function myFunction(){
+    var input = document.getElementById("Input").value
+    var search=document.querySelector(".search")
+    var filter = input.toUpperCase()
+    var vo = document.querySelectorAll(".f")
+    for(let x = 0; x < vo.length; x++){
+        var a = vo[x].innerText
+        var i = vo[x].parentElement
+        if(a.toUpperCase().indexOf(filter) > -1){
+            search.append(i);
+        }
+    }
+}

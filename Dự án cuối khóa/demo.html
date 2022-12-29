@@ -5,18 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="demo.css">
 </head>
-<style>
-    body {
-        background: url(./img/background.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
-</style>
 <body>
-    <h2>Trở lại trang trước</h2>
+    <h2> <i class="fa fa-arrow-left" style="font-size: 30px; width: 40px;" onclick="myFunction()"></i>Trở lại trang trước</h2>
     <iframe width="800" height="400" src="https://www.youtube.com/embed/jEDaVHmw7r4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 215px; margin-top: 50px;"></iframe>
     <br><br>
     <div class="bot" style="width: 850px;margin-left: 190px;">
@@ -71,5 +64,26 @@
             </div>
         </div>
     </div>
+    <div class="container" style="display: flex; justify-content: center;">
+        <div class="comment-box">
+          <div class="comment-form">
+            <div class="header">Add Your Comment</div>
+            <form action="#" onsubmit="event.preventDefault(); postComment()">
+              <div> 
+                <input type="text" id="name" placeholder="Name"/>
+              </div>
+              <div>
+                <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
+              </div>
+              <button type="submit">COMMENT</button>
+            </form>  
+          </div>
+          <div>
+            <h4 class="header">Comments</h4>
+            <div id="comments"></div>
+          </div>
+        </div>
+      </div>
 </body>
+<script src="demo.js"></script>
 </html>

@@ -31,32 +31,43 @@
             <img src="./img/chris.gif" alt="" style="position: absolute; top:80px; right: 40px; width:300px; background-color:none; " srcset="">
         </div>
         <br><br>
-        <div style="background-color:black; height:4px; width:100%; "></div>
+        <div class="search">
+            <input type="text" id="Input" placeholder="Tìm kiếm" style="height: 35px; width: 1000px; margin-top: -30px; margin-left: 70px;">
+            <button style="height: 40px; margin-right:20px; background-color: white; border: solid 1px black;" onclick="myFunction()">Tìm kiếm</button>
+            <br>
+        </div>
     </div>
     
     <div class="film" style="margin-top: -500px;">
         <div class="classic">
             <h2 style="color: green; margin-left: 20px;">PHIM KINH ĐIỂN</h2>
             <div class="hr" style="background-color:red; height:2px; width:95%; margin-left: 20px;"></div>
-            <div class="movie1"></div>
-            <i class="fa fa-chevron-right arrow2" style="font-size:120px;color:gray; position: absolute; top: 540px; right:0; opacity: 0.5;"></i>
-            <i class="fa fa-chevron-left arrow1" style="font-size:120px;color:gray; position: absolute; top: 540px; left:0; opacity: 0.5;"></i>
+            <div class="mov1" style="display: flex; justify-content: stretch;">
+                <div class="movie1"></div>
+                <i class="fa fa-chevron-left arrow1" style="font-size:120px;color:gray;  opacity: 0.5; position:absolute; margin-top: 60px;"></i>
+                <i class="fa fa-chevron-right arrow2" style="font-size:120px;color:gray; opacity: 0.5; position:absolute; right: 22px;  margin-top: 60px;"></i>
+            </div>
         </div>
         <div class="new">
             <h2 style="color: green; margin-left: 20px;">PHIM MỚI</h2>
             <div class="hr" style="background-color:red; height:2px; width:95%; margin-left: 20px;"></div>
-            <div class="movie2"></div>
-            <i class="fa fa-chevron-right arrow4" style="font-size:120px;color:gray; position: absolute; top: 880px; right:0; opacity: 0.5;"></i>
-            <i class="fa fa-chevron-left arrow3" style="font-size:120px;color:gray; position: absolute; top: 880px; left:0; opacity: 0.5;"></i>
+            <div class="mov2" style="display: flex; ">
+                <div class="movie2"></div>
+                <i class="fa fa-chevron-left arrow3" style="font-size:120px;color:gray; opacity: 0.5; position:absolute; margin-top: 60px;"></i>
+                <i class="fa fa-chevron-right arrow4" style="font-size:120px;color:gray;  opacity: 0.5; position:absolute; right: 22px;  margin-top: 60px;"></i>
+            </div>
         </div>
         <div class="nice">
             <h2 style="color: green; margin-left: 20px;">PHIM HAY</h2>
             <div class="hr" style="background-color:red; height:2px; width:95%; margin-left: 20px;"></div>
-            <div class="movie3"></div>
-            <i class="fa fa-chevron-right arrow6" style="font-size:120px;color:gray; position: absolute; top: 1240px; right:0; opacity: 0.5;"></i>
-            <i class="fa fa-chevron-left arrow5" style="font-size:120px;color:gray; position: absolute; top: 1240px; left:0; opacity: 0.5;"></i>
+            <div class="mov3" style="display: flex;">
+                <div class="movie3"></div>
+                <i class="fa fa-chevron-left arrow5" style="font-size:120px;color:gray; opacity: 0.5; position:absolute; margin-top: 60px;"></i>
+                <i class="fa fa-chevron-right arrow6" style="font-size:120px;color:gray;  opacity: 0.5; position:absolute; right: 22px;  margin-top: 60px;"></i>
+            </div>
         </div>
     </div>
+    <div class="search" style="background-color:azure; height: 500px; width: 1200px; margin-top: -1420px; margin-left: 8px; position: fixed; visibility: hidden;"></div>
     <script src="data.js"></script>
 </body>
 </html>
